@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Poppins';
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    background-image: url(/public/src/blueSky.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 36px;
+    color: whitesmoke;
+}
+
+.mainBox #temp{
+    align-items: center;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.mainBox #city{
+    border-top: 3px solid white;
+}
+
+.bodyBox{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.box{
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-top: 5px;
+    height: 50px;
+    width: 294px;
+    font-size: x-large;
+    font-weight:bold;
+    text-align: center;
+    color: rgb(18, 64, 118);
+}
+
+.box #description{
+    text-transform:capitalize;
+}
+
+.footerBox{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 294px;
+    color: white;
+    background-color: rgb(18, 64, 118);
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+button.geoloc{
+    height: 30px;
+}
+
+button.search{
+    height: 40px;
+}
+
+button:hover{
+    background-color: rgb(48, 129, 208);
+}
+
+form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+input{
+    width: 294px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+input::placeholder{
+    text-align: center;
+    font-size: large;
+}
