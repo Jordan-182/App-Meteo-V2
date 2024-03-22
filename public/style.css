@@ -10,29 +10,48 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: brown;
-    background-image: url(/public/src/blueSky.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
 
 .mainBox{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 75px;
-    font-size: 36px;
-    color: whitesmoke;
+    height: auto;
+    width: 310px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    padding-bottom: 8px;
+    position: relative;
+    color: white;
+}
+
+.mainBox::before{
+    content: '';
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    opacity: 0.65;
+    border-radius: 10px;
 }
 
 .mainBox #temp{
     align-items: center;
     font-size: 90px;
     font-weight: bold;
+    isolation: isolate;
 }
 
 .mainBox #city{
     border-top: 3px solid white;
+    isolation: isolate;
+    font-size: 36px;
+    text-align: center;
 }
 
 .bodyBox{
@@ -40,12 +59,22 @@ body{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 300px;
+    width: 310px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
     padding: 3px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.bodyBox::before{
+    background-color: black;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.65;
+    border-radius: 10px;
 }
 
 .box{
@@ -58,7 +87,8 @@ body{
     font-size: x-large;
     font-weight:bold;
     text-align: center;
-    color: rgb(18, 64, 118);
+    color: whitesmoke;
+    isolation: isolate;
 }
 
 .box #description{
@@ -76,7 +106,7 @@ button{
     margin-right: auto;
     width: 294px;
     color: white;
-    background-color: rgb(18, 64, 118);
+    background-color: rgba(0, 0, 0, 0.90);
     border-radius: 10px;
     font-size: large;
     cursor: pointer;
@@ -91,7 +121,7 @@ button.search{
 }
 
 button:hover{
-    background-color: rgb(48, 129, 208);
+    background-color: rgb(61, 61, 61);
 }
 
 form{
@@ -110,6 +140,7 @@ input{
     border-radius: 10px;
     text-align: center;
     font-size: large;
+    border: 3px solid black;
 }
 
 input::placeholder{

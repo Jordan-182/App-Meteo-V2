@@ -32,21 +32,26 @@ document.querySelector('form').addEventListener('submit', function(e){
 
 // Adaptation background
 function background(){
-    let descriptionText = document.querySelector("#description").textContent.trim();
-    let body = document.querySelector("body");
-    let textBox = document.getElementsByClassName("box");
-    console.log("Description récupérée :", descriptionText);
-    if(descriptionText === "couvert" || descriptionText ==="nuageux"){
-        body.style.backgroundImage = "url('/public/src/darkClouds.jpg')";
-        for (let i = 0; i < textBox.length; i++) {
-            textBox[i].style.color = "white";
-        }
+    // Récupération du texte de description
+let descriptionText = document.querySelector("#description").textContent.trim();
+// Sélection de l'élément body
+let body = document.querySelector("body");
+// Affichage du texte de description dans la console
+console.log("Description récupérée :", descriptionText);
+// Vérification du texte de description et application des styles appropriés
+if(descriptionText === "couvert" || descriptionText === "nuageux") {
+    // Changement de l'image de fond pour les conditions météorologiques "couvert" ou "nuageux"
+    body.style.backgroundImage = "url('/public/src/darkClouds.jpg')";
     }
-    else if(descriptionText ==="orage" || descriptionText ==="bruine" || descriptionText ==="légère pluie" || descriptionText ==="bruine légère"){
-        body.style.backgroundImage = "url('/public/src/rain.jpg')";
+    else if(descriptionText === "orage" || descriptionText === "bruine" || descriptionText === "brume" || descriptionText === "légère pluie" || descriptionText === "bruine légère" || descriptionText === "pluie modérée") {
+    // Changement de l'image de fond pour les conditions météorologiques "orage", "bruine", "légère pluie" ou "bruine légère"
+    body.style.backgroundImage = "url('/public/src/rain.jpg')";
     }
     else if(descriptionText ==="chutes de neige" || descriptionText ==="légères chutes de neige"){
         body.style.backgroundImage = "url('/public/src/snow.jpg')";
+    }
+    else if(descriptionText ==="brume sèche"){
+        body.style.backgroundImage = "url('/public/src/fog.jpg')";
     }
     else if(descriptionText === "partiellement nuageux"){
         body.style.backgroundImage = "url('/public/src/clouds.jpg')";
