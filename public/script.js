@@ -41,23 +41,23 @@ console.log("Description récupérée :", descriptionText);
 // Vérification du texte de description et application des styles appropriés
 if(descriptionText === "couvert" || descriptionText === "nuageux") {
     // Changement de l'image de fond pour les conditions météorologiques "couvert" ou "nuageux"
-    body.style.backgroundImage = "url('/public/src/darkClouds.jpg')";
+    body.style.backgroundImage = "url('../public/src/darkClouds.jpg')";
     }
     else if(descriptionText === "orage" || descriptionText === "bruine" || descriptionText === "brume" || descriptionText === "légère pluie" || descriptionText === "bruine légère" || descriptionText === "pluie modérée") {
     // Changement de l'image de fond pour les conditions météorologiques "orage", "bruine", "légère pluie" ou "bruine légère"
-    body.style.backgroundImage = "url('/public/src/rain.jpg')";
+    body.style.backgroundImage = "url('../public/src/rain.jpg')";
     }
     else if(descriptionText ==="chutes de neige" || descriptionText ==="légères chutes de neige"){
-        body.style.backgroundImage = "url('/public/src/snow.jpg')";
+        body.style.backgroundImage = "url('../public/src/snow.jpg')";
     }
     else if(descriptionText ==="brume sèche"){
-        body.style.backgroundImage = "url('/public/src/fog.jpg')";
+        body.style.backgroundImage = "url('../public/src/fog.jpg')";
     }
     else if(descriptionText === "partiellement nuageux"){
-        body.style.backgroundImage = "url('/public/src/clouds.jpg')";
+        body.style.backgroundImage = "url('../public/src/clouds.jpg')";
     }
     else {
-        body.style.backgroundImage = "url('/public/src/blueSky.jpg')";
+        body.style.backgroundImage = "url('../public/src/blueSky.jpg')";
     }
 }
 
